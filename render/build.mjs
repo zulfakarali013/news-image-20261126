@@ -122,7 +122,8 @@ const { mkdirSync } = await import('node:fs');
 mkdirSync(join(root, 'out'), { recursive: true });
 writeFileSync(outHtml, html);
 
-const { chromium } = await import(process.env.PLAYWRIGHT || 'playwright');
+// Playwright is a dev-only dependency (see package.json); the entry itself never runs it.
+const { chromium } = await import('playwright');
 const browser = await chromium.launch();
 const page = await browser.newPage({ viewport: { width: 1024, height: 1024 }, deviceScaleFactor: 1 });
 await page.goto('file://' + outHtml);
