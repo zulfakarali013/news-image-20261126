@@ -113,8 +113,9 @@ await tab.goto('file://' + pageFile);
 await tab.waitForTimeout(300);
 const report = await tab.evaluate(() => {
   const cut = [];
+  // Serif headlines overhang their line box by a pixel or two, so allow 3 px before calling text cut.
   for (const el of document.querySelectorAll('h2,h3,p,li,.dl,.chk,.src')) {
-    if (el.scrollHeight > el.clientHeight + 1 || el.scrollWidth > el.clientWidth + 1) cut.push(el.textContent.slice(0, 40));
+    if (el.scrollHeight > el.clientHeight + 3 || el.scrollWidth > el.clientWidth + 1) cut.push(el.textContent.slice(0, 40));
   }
   return { footBottom: Math.round(document.querySelector('.foot').getBoundingClientRect().bottom), cut };
 });
