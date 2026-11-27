@@ -83,7 +83,7 @@ h3{font-size:15px;line-height:1.12;font-weight:900;margin:1px 0 2px}
 .briefs{margin-top:4px;border-top:2px solid #1d1b19;padding-top:4px}
 .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:0 16px}
 .cols ul{list-style:none}
-.cols li{font-size:11.5px;line-height:1.28;padding-bottom:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cols li{font-size:12px;line-height:1.32;padding-bottom:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .cols li b{display:inline-block;width:19px;color:#b3261e}
 .bp{font-weight:800}
 .foot{margin-top:2px;border-top:1px solid #1d1b19;padding-top:3px;font-size:8.8px;color:#4b453d;text-align:center;white-space:nowrap;overflow:hidden}
