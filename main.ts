@@ -1,7 +1,7 @@
 // Entry for make.fun news-image-20261126: "Sum up 26 November's world news in one image".
 //
-// The picture itself is drawn ahead of time by render/build.mjs from the stories in
-// render/stories.json (every headline, label, drawing and map pin is generated there),
+// The picture itself is drawn ahead of time by edition3/build.mjs from the stories in
+// edition3/day.json (every headline, label, drawing and map pin is generated there),
 // and committed as entry.png.b64 beside this file (one line of base64, because the upload
 // route only carries text files). At grading time there is no network and
 // only the Node standard library, so this program only decodes it, verifies it and copies it
